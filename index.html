@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<link rel="stylesheet" href="stilus.css">
+</head>
+<body>
+	<div ID="kinalat">
+		<table>
+            <tr>
+                <th>Termék megnevezése</th>
+                <th>Termék képe</th>
+            </tr>
+            <tr onmouseover="nagyitKep('RAM.jpg')" onmouseout="visszaKep()" onclick="kivalaszt('Kingston HyperX Predator 16GB (4x4GB) DDR4 3200MHz HX432C16PB3K4/16')">
+                <td class="termekek">Kingston HyperX Predator 16GB (4x4GB) DDR4 3200MHz HX432C16PB3K4/16</td>
+                <td><img src="RAM.jpg" alt="RAM" class="kiskep"></td>
+            </tr>
+            <tr onmouseover="nagyitKep('monitor.jpg')" onmouseout="visszaKep()" onclick="kivalaszt('LG 27MP59G-P Monitor')">
+                <td class="termekek">LG 27MP59G-P Monitor</td>
+                <td><img src="monitor.jpg" alt="Monitor" class="kiskep"></td>
+            </tr>
+            <tr onmouseover="nagyitKep('HDD.jpg')" onmouseout="visszaKep()" onclick="kivalaszt('Western Digital Red 3.5 2TB 5400rpm 64MB SATA3 WD20EFRX')">
+                <td class="termekek">Western Digital Red 3.5 2TB 5400rpm 64MB SATA3 WD20EFRX</td>
+                <td><img src="HDD.jpg" alt="HDD" class="kiskep"></td>
+            </tr>
+            <tr onmouseover="nagyitKep('SSD.jpg')" onmouseout="visszaKep()" onclick="kivalaszt('Samsung 970 EVO 500GB M.2 PCIe MZ-V7E500BW')">
+                <td class="termekek">Samsung 970 EVO 500GB M.2 PCIe MZ-V7E500BW</td>
+                <td><img src="SSD.jpg" alt="SSD" class="kiskep"></td>
+            </tr>
+            <tr onmouseover="nagyitKep('tap.jpg')" onmouseout="visszaKep()" onclick="kivalaszt('Chieftec Smart 500W (GPS-500A8)')">
+                <td class="termekek">Chieftec Smart 500W (GPS-500A8)</td>
+                <td><img src="tap.jpg" alt="Táp" class="kiskep"></td>
+            </tr>
+        </table>
+	</div>
+
+	<div ID="kep">
+		<img ID="nagykep" src="ures.jpg">
+	</div>
+
+	<div id="kosar">
+        <h2>Kosár tartalma:</h2>
+    </div>
+	<script src="kod.js"></script>
+</body>
+</html>
