@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-	<link rel="stylesheet" href="stilus.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stilus.css">
 </head>
 <body>
-	<div ID="kinalat">
-		<table>
+    <div id="kinalat">
+        <table>
             <tr>
                 <th>Termék megnevezése</th>
                 <th>Termék képe</th>
+                <th>Ár (Ft)</th>
+                <th>Mennyiség</th>
+                <th>Részösszeg (Ft)</th>
             </tr>
-            <tr onmouseover="nagyitKep('RAM.jpg')" onmouseout="visszaKep()" onclick="kivalaszt('Kingston HyperX Predator 16GB (4x4GB) DDR4 3200MHz HX432C16PB3K4/16')">
-                <td class="termekek">Kingston HyperX Predator 16GB (4x4GB) DDR4 3200MHz HX432C16PB3K4/16</td>
-                <td><img src="RAM.jpg" alt="RAM" class="kiskep"></td>
+            <tr>
+                <td>Kingston HyperX Predator 16GB</td>
+                <td><img src="RAM.jpg" alt="RAM" class="kiskep" onmouseover="nagyitKep('RAM.jpg')" onmouseout="visszaKep()"></td>
+                <td id="ar1">32000</td>
+                <td><input type="number" id="ertek1" value="0" min="0" oninput="szamolas()"></td>
+                <td id="resz1">0</td>
             </tr>
-            <tr onmouseover="nagyitKep('monitor.jpg')" onmouseout="visszaKep()" onclick="kivalaszt('LG 27MP59G-P Monitor')">
-                <td class="termekek">LG 27MP59G-P Monitor</td>
-                <td><img src="monitor.jpg" alt="Monitor" class="kiskep"></td>
+            <tr >
+                <td>LG 27MP59G-P Monitor</td>
+                <td><img src="monitor.jpg" alt="Monitor" class="kiskep" onmouseover="nagyitKep('monitor.jpg')" onmouseout="visszaKep()"></td>
+                <td id="ar2">60000</td>
+                <td><input type="number" id="ertek2" value="0" min="0" oninput="szamolas()"></td>
+                <td id="resz2">0</td>
             </tr>
-            <tr onmouseover="nagyitKep('HDD.jpg')" onmouseout="visszaKep()" onclick="kivalaszt('Western Digital Red 3.5 2TB 5400rpm 64MB SATA3 WD20EFRX')">
-                <td class="termekek">Western Digital Red 3.5 2TB 5400rpm 64MB SATA3 WD20EFRX</td>
-                <td><img src="HDD.jpg" alt="HDD" class="kiskep"></td>
+            <tr>
+                <td>Western Digital Red 2TB</td>
+                <td><img src="HDD.jpg" alt="HDD" class="kiskep"  onmouseover="nagyitKep('HDD.jpg')" onmouseout="visszaKep()"></td>
+                <td id="ar3">20000</td>
+                <td><input type="number" id="ertek3" value="0" min="0" oninput="szamolas()"></td>
+                <td id="resz3">0</td>
             </tr>
-            <tr onmouseover="nagyitKep('SSD.jpg')" onmouseout="visszaKep()" onclick="kivalaszt('Samsung 970 EVO 500GB M.2 PCIe MZ-V7E500BW')">
-                <td class="termekek">Samsung 970 EVO 500GB M.2 PCIe MZ-V7E500BW</td>
-                <td><img src="SSD.jpg" alt="SSD" class="kiskep"></td>
+            <tr >
+                <td>Samsung 970 EVO 500GB</td>
+                <td><img src="SSD.jpg" alt="SSD" class="kiskep" onmouseover="nagyitKep('SSD.jpg')" onmouseout="visszaKep()"></td>
+                <td id="ar4">25000</td>
+                <td><input type="number" id="ertek4" value="0" min="0" oninput="szamolas()"></td>
+                <td id="resz4">0</td>
             </tr>
-            <tr onmouseover="nagyitKep('tap.jpg')" onmouseout="visszaKep()" onclick="kivalaszt('Chieftec Smart 500W (GPS-500A8)')">
-                <td class="termekek">Chieftec Smart 500W (GPS-500A8)</td>
-                <td><img src="tap.jpg" alt="Táp" class="kiskep"></td>
+            <tr >
+                <td>Chieftec Smart 500W</td>
+                <td><img src="tap.jpg" alt="Táp" class="kiskep" onmouseover="nagyitKep('tap.jpg')" onmouseout="visszaKep()"></td>
+                <td id="ar5">15000</td>
+                <td><input type="number" id="ertek5" value="0" min="0" oninput="szamolas()"></td>
+                <td id="resz5">0</td>
             </tr>
         </table>
-	</div>
-
-	<div ID="kep">
-		<img ID="nagykep" src="ures.jpg">
-	</div>
-
-	<div id="kosar">
-        <h2>Kosár tartalma:</h2>
     </div>
-	<script src="kod.js"></script>
+
+    <div id="kep">
+        <img id="nagykep" src="ures.jpg">
+    </div>
+
+    <div id="kosar">
+        <h2>Fizetendő végösszeg: <span id="osszesen">0</span> Ft</h2>
+    </div>
+
+    <script src="kod.js"></script>
 </body>
 </html>
